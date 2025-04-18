@@ -1,0 +1,8 @@
+name: youGotNothingHere
+on: issues
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: issue triggered
+        run: echo "hai"
