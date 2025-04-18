@@ -1,8 +1,10 @@
 name: youGotNothingHere
-on: issues
+on: 
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled, assigned, unassigned]
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: issue triggered
-        run: echo "hai guys"
+      - name: event details
+        run: echo "${{ github.event}}"
